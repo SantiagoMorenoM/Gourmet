@@ -1,17 +1,18 @@
-﻿namespace GourmetModel;
-using GourmetModel.Receta;
+﻿
+using RecetaModel;
+namespace RecetarioModel;
 public class Recetario
 
 {
      private List<Receta> recetas;
-     private string nombre;
-     public Recetario(string pNombre, List<Receta> pRecetas){
+     private string titulo;
+     public Recetario(string pTitulo, List<Receta> pRecetas){
          recetas=pRecetas;
-         nombre=pNombre;
+         titulo=pTitulo;
      }
-    public string getNombre()
+    public string getTitulo()
     {
-        return nombre;
+        return titulo;
     }
     public List<Receta> getRecetas(){
         return recetas;

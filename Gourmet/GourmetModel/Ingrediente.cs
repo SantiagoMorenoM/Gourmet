@@ -1,4 +1,4 @@
-﻿namespace GourmetModel;
+﻿namespace IngredienteModel;
 
 public class Ingrediente
 {
@@ -15,10 +15,13 @@ public class Ingrediente
     private tipoMateriaPrima tipo;
     private string nombre;
     private string unidadDeMedida;
-    public Ingrediente(string pNombre, tipoMateriaPrima pTipo, string pUnidadDeMedida ){
+
+    private int caloriasPorUnidad;
+    public Ingrediente(string pNombre, tipoMateriaPrima pTipo, string pUnidadDeMedida , int pCalorias){
         nombre=pNombre;
         tipo=pTipo;
         unidadDeMedida=pUnidadDeMedida;
+        caloriasPorUnidad=pCalorias;
 
     }
     public void setTipo(tipoMateriaPrima pTipo)
@@ -31,7 +34,7 @@ public class Ingrediente
     }
     public void setTipo(string pUnidadDeMedida)
     {
-        unidadDeMedida = pUnidadDeMedida
+        unidadDeMedida = pUnidadDeMedida;
     }
     public tipoMateriaPrima getTipo()
     {
@@ -44,5 +47,8 @@ public class Ingrediente
     public string getUnidadDeMedida()
     {
         return unidadDeMedida;
+    }
+    public int getCalorias(){
+        return caloriasPorUnidad;
     }
 }

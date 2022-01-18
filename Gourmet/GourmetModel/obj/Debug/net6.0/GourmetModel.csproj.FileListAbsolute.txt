@@ -1,0 +1,12 @@
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\bin\Debug\net6.0\GourmetModel.deps.json
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\bin\Debug\net6.0\GourmetModel.dll
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\bin\Debug\net6.0\ref\GourmetModel.dll
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\bin\Debug\net6.0\GourmetModel.pdb
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.csproj.AssemblyReference.cache
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.AssemblyInfoInputs.cache
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.AssemblyInfo.cs
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.csproj.CoreCompileInputs.cache
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.dll
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\ref\GourmetModel.dll
+c:\Users\smoreno\Documents\Gourmet github\Gourmet\Gourmet\GourmetModel\obj\Debug\net6.0\GourmetModel.pdb
