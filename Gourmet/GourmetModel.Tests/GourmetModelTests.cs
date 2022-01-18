@@ -7,9 +7,10 @@ namespace GourmetModel.Tests;
 
 public class GourmetModelTests
 {
-    Ingrediente ingrediente1 = new Ingrediente("Res", Ingrediente.tipoMateriaPrima.Carnes, "gr", 3);
-    Ingrediente ingrediente2 = new Ingrediente("Pollo", Ingrediente.tipoMateriaPrima.Carnes, "gr", 4);
-    Ingrediente ingrediente3 = new Ingrediente("Zanahoria", Ingrediente.tipoMateriaPrima.Vegetales, "unidad", 50);
+    //Ingredientes utilizados durante los tests
+    Ingrediente ingrediente1 = new Ingrediente("Res", Ingrediente.gruposAlimenticios.Carnes, "gr", 3);
+    Ingrediente ingrediente2 = new Ingrediente("Pollo", Ingrediente.gruposAlimenticios.Carnes, "gr", 4);
+    Ingrediente ingrediente3 = new Ingrediente("Zanahoria", Ingrediente.gruposAlimenticios.Vegetales, "unidad", 50);
 
 
 
@@ -17,36 +18,45 @@ public class GourmetModelTests
 
 
 
+    //Test en el que se revisa que la cantidad de recetas en el recetario concuerde con las introducidas
     [Fact]
     public void testCantidadRecetas()
     {
-        Receta receta = new Receta("Receta");
+        Receta receta1 = new Receta("Receta1");
+        Receta receta2 = new Receta("Receta2");
 
+        // Se le agregan 2 Recetas al Recetario
         List<Receta> recetas = new List<Receta>();
-        recetas.Add(receta);
-        recetas.Add(receta);
+        recetas.Add(receta1);
+        recetas.Add(receta2);
         Recetario recetario = new Recetario("Recetario", recetas);
+        //Se revisa que la cantidad de recetas del recetario sean, efectivamente, 2
 
         Assert.Equal(2, recetario.getRecetas().Count);
 
     }
+    //Test que revisa que la cantidad de ingredientes de la receta concuerden con las introducidas
     [Fact]
     public void testCantidadIngredientes()
-    {
+    {   //Se agregan 2 ingredientes a la receta
         Receta receta = new Receta("Receta");
         receta.addIngrediente(ingrediente1, 200);
         receta.addIngrediente(ingrediente2, 150);
+        //Se revisa que la cantidad de ingredientes de la receta sean, efectivamente, 2
 
         Assert.Equal(2, receta.getIngredientes().Count);
 
 
     }
+    //Test que revisa el calculo de calorias de una receta
     [Fact]
     public void testCalculoCalorias()
     {
         Receta receta = new Receta("Receta");
         receta.addIngrediente(ingrediente1, 200);
         receta.addIngrediente(ingrediente3, 1);
+        //Se calcula las calorias de la receta tomando el número de unidades y múltiplicado por las calorias
+        // de los ingredientes
 
         int preCalculoIngredientes = ingrediente1.getCalorias() * 200;
         preCalculoIngredientes += ingrediente3.getCalorias() * 1;
@@ -55,6 +65,7 @@ public class GourmetModelTests
 
 
     }
+    //Test que revisa si una receta presenta un ingrediente determinado o no
     [Fact]
     public void testFindIngrediente()
     {
@@ -69,15 +80,16 @@ public class GourmetModelTests
 
 
     }
+    //Test que revisa si una receta presenta un ingrediente de un grupo alimenticio determinado o no
     [Fact]
-    public void testCheckTipo()
+    public void testCheckGrupoAlimenticio()
     {
         Receta receta = new Receta("Receta");
         receta.addIngrediente(ingrediente1, 200);
         receta.addIngrediente(ingrediente2, 150);
 
-        Assert.True(receta.checkTipo(Ingrediente.tipoMateriaPrima.Carnes), "Debería confirmar que hay carnes");
-        Assert.False(receta.checkTipo(Ingrediente.tipoMateriaPrima.Frutas), "Debería confirmar que no hay frutas");
+        Assert.True(receta.checkGrupoAlimenticio(Ingrediente.gruposAlimenticios.Carnes), "Debería confirmar que hay carnes");
+        Assert.False(receta.checkGrupoAlimenticio(Ingrediente.gruposAlimenticios.Frutas), "Debería confirmar que no hay frutas");
 
 
 
